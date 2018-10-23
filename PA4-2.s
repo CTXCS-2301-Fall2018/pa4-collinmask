@@ -16,8 +16,16 @@ main:	PUSH	{LR}
 	@-------------
 	@ Your code goes here.  Put n! in R2
 	@-------------
-
-
+	MOV R2, #1
+	CMP R0, #0
+	MOVEQ R2, #1
+loop:
+	CMP R0, #1
+	MULGE R2, R2, R0
+	SUBGE R0, R0, #1
+	BGE loop
+	
+	
 
 
 	@-------------
