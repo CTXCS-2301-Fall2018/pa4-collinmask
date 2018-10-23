@@ -16,7 +16,13 @@ main:
 	@ Your code must put the final answer
 	@ in R1.
 	@-------------
-
+	MOV R1, #0
+Loop:	
+	CMP R2, R3
+	ADDLE R1, R1, R2
+	ADDLE R2, R2, #1
+	BNE Loop
+	
 	
 	
 	@-------------
